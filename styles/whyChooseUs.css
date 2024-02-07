@@ -4,6 +4,7 @@
   display: flex;
   padding: 80px;
   column-gap: 100px;
+  overflow: hidden;
 }
 .why-choose-sec {
   flex: 1;
@@ -68,8 +69,8 @@
   font-size: 25px;
 }
 .why-choose-left {
-  transform: translateY(250px);
-  transition: opacity 0.5s, transform 2.5s;
+  transform: translateY(150px);
+  transition: opacity 0.5s, transform 3s;
 }
 .why-choose-animate1 {
   transform: translateY(0px);

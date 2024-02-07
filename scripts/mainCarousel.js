@@ -110,9 +110,11 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("animate1");
+        observer.unobserve(entry.target);
       }
       if (!entry.isIntersecting) {
         entry.target.classList.remove("animate1");
+        observer.unobserve(entry.target);
       }
     });
   }, options);
@@ -121,9 +123,11 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("animate2");
+        observer.unobserve(entry.target);
       }
       if (!entry.isIntersecting) {
         entry.target.classList.remove("animate2");
+        observer.unobserve(entry.target);
       }
     });
   }, options);
