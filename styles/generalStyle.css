@@ -1,0 +1,36 @@
+div,
+a,
+p {
+  font-family: sans-serif;
+  color: white;
+  font-size: 16px;
+  font-weight: 400px;
+}
+body {
+  background-color: black;
+}
+.underline-text {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.underline-text:hover {
+  color: #66fcf1;
+}
+.underline-text::before {
+  top: 30px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px; /* Underline height */
+  background-color: #66fcf1; /* Underline color */
+  transition: width 0.3s ease-in-out; /* Animation transition */
+}
+
+.underline-text:hover::before {
+  width: 100%;
+}

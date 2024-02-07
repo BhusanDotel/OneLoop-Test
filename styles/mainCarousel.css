@@ -1,0 +1,254 @@
+.main-carousel-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.slider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  transition: all 0.7s;
+}
+.section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section1 {
+  background-image: url(/images/main-sec-1-img.jpg);
+}
+.section2 {
+  background-image: url(/images/main-sec-2-img.jpg);
+}
+.carousel-controlls .arrow {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  border: 2px solid #66fcf1;
+  padding: 10px;
+}
+
+.arrow.right {
+  right: 0;
+  margin-right: 100px;
+}
+.arrow.left {
+  margin-left: 100px;
+}
+
+.go-right {
+  transform: translateX(0);
+  animation: goToRight 1.5s ease forwards;
+}
+@keyframes goToRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+.move-arrow-right {
+  transform: translateX(0);
+  animation: arrowToRight 1s ease forwards;
+}
+@keyframes arrowToRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+.position-left-arrow {
+  transform: translateX(-100px);
+  animation: positionLeftArrow 1s ease forwards;
+}
+@keyframes positionLeftArrow {
+  0% {
+    opacity: 1;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.position-right-arrow {
+  transform: translateX(100px);
+  animation: positionRightonArrow 1s ease forwards;
+}
+@keyframes positionRightonArrow {
+  0% {
+    opacity: 1;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.go-left {
+  transform: translateX(0);
+  animation: goToLeft 1.5s ease forwards;
+}
+@keyframes goToLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+.move-arrow-left {
+  transform: translateX(0);
+  animation: ArrowToLeft 1s ease forwards;
+}
+@keyframes ArrowToLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+}
+
+.arrow:hover {
+  background-color: #66fcf1;
+}
+
+.arrow:hover .mini-arrow-right,
+.arrow:hover .mini-arrow-left {
+  stroke: black;
+}
+
+.mini-arrow-right {
+  transform: rotate(270deg);
+  stroke: #66fcf1;
+}
+
+.mini-arrow-left {
+  transform: rotate(90deg);
+  stroke: #66fcf1;
+}
+
+.reality-end-text {
+  color: #66fcf1;
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: -20px;
+}
+.imagination-text {
+  font-size: 75px;
+  margin-bottom: -20px;
+}
+.begins-text {
+  font-size: 75px;
+}
+.we-specialize-text {
+  width: 600px;
+  font-size: 15px;
+}
+.section-left {
+  padding-top: 100px;
+  flex: 1;
+  padding-left: 100px;
+}
+.section-right {
+  flex: 1;
+}
+.section-button-container {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+}
+.explore-btn {
+  width: 150px;
+  height: 50px;
+  color: black;
+  outline: none;
+  border: none;
+  background-color: #66fcf1;
+  font-size: 17px;
+  cursor: pointer;
+}
+.explore-btn:hover {
+  background-color: #f78550;
+}
+.radiate-btn-container {
+  position: relative;
+  height: 50px;
+  width: 50px;
+}
+.outer-radiate {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 100%;
+  transform: scale(0);
+  animation: radiate 0.8s linear infinite;
+}
+.radiate-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  background-color: #66fcf1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.radiate-btn-triangle {
+  transform: rotate(90deg);
+}
+@keyframes radiate {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0.1;
+  }
+}
+.watch-intro-text {
+  font-size: 20px;
+  font-weight: bolder;
+}
+.carousel-animate-type1 {
+  transform: translateY(100px);
+  transition: opacity 0.5s, transform 2s;
+}
+.animate1 {
+  transform: translateY(0px);
+}
+.carousel-animate-type2 {
+  transform: translateY(250px);
+  transition: opacity 0.5s, transform 2.5s;
+}
+.animate2 {
+  transform: translateY(0px);
+}
